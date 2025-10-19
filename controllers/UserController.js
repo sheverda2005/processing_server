@@ -10,7 +10,8 @@ class UserController {
     async checkUser(req, res, next) {
         const {email, password} = req.body
         const user = await UserModel.findOne({email: email})
-        if (user.password === password) {
+        console.log(password == user.password)
+        if (user.password == password) {
             res.status(200).json(user)
         } else  {
             res.status(401).json({message: 'Incorrect password'})
