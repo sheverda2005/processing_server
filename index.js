@@ -26,6 +26,7 @@ async function start() {
             useNewUrlParser: true,
             useUnifiedTopology: true
         })
+        console.log("conected")
         app.listen(PORT, ()=> {
             console.log("Server has been started......")
         })
