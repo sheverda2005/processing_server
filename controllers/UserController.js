@@ -16,6 +16,7 @@ class UserController {
             res.status(401).json({message: 'Incorrect password'})
 
         }
+        res.json({message: "ok"})
     }
 
 }
